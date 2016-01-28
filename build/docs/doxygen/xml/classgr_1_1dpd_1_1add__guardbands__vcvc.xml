@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classgr_1_1dpd_1_1add__guardbands__vcvc" kind="class" prot="public">
+    <compoundname>gr::dpd::add_guardbands_vcvc</compoundname>
+    <basecompoundref prot="public" virt="virtual">sync_block</basecompoundref>
+    <derivedcompoundref refid="classgr_1_1dpd_1_1add__guardbands__vcvc__impl" prot="public" virt="non-virtual">gr::dpd::add_guardbands_vcvc_impl</derivedcompoundref>
+    <includes refid="add__guardbands__vcvc_8h" local="no">add_guardbands_vcvc.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1dpd_1_1add__guardbands__vcvc_1a427014ae1a89df4e95a40395e7f8dea4" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1dpd_1_1add__guardbands__vcvc" kindref="compound">add_guardbands_vcvc</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;add_guardbands_vcvc&gt; gr::dpd::add_guardbands_vcvc::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/include/dpd/add_guardbands_vcvc.h" line="39" column="1" bodyfile="/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/include/dpd/add_guardbands_vcvc.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1dpd_1_1add__guardbands__vcvc_1acff92d80d89292c8122b841cc275f777" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1dpd_1_1add__guardbands__vcvc_1a427014ae1a89df4e95a40395e7f8dea4" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::dpd::add_guardbands_vcvc::make</definition>
+        <argsstring>(int in_vlen, int out_vlen)</argsstring>
+        <name>make</name>
+        <param>
+          <type>int</type>
+          <declname>in_vlen</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>out_vlen</declname>
+        </param>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1dpd_1_1add__guardbands__vcvc" kindref="compound">dpd::add_guardbands_vcvc</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1dpd_1_1add__guardbands__vcvc" kindref="compound">dpd::add_guardbands_vcvc</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1dpd_1_1add__guardbands__vcvc_1acff92d80d89292c8122b841cc275f777" kindref="member">dpd::add_guardbands_vcvc::make</ref> is the public interface for creating new instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/include/dpd/add_guardbands_vcvc.h" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;+description of block+&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>gr::sync_block</label>
+      </node>
+      <node id="8">
+        <label>gr::dpd::add_guardbands_vcvc_impl</label>
+        <link refid="classgr_1_1dpd_1_1add__guardbands__vcvc__impl"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>gr::dpd::add_guardbands_vcvc</label>
+        <link refid="classgr_1_1dpd_1_1add__guardbands__vcvc"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10">
+        <label>gr::sync_block</label>
+      </node>
+      <node id="9">
+        <label>gr::dpd::add_guardbands_vcvc</label>
+        <link refid="classgr_1_1dpd_1_1add__guardbands__vcvc"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/include/dpd/add_guardbands_vcvc.h" line="37" column="1" bodyfile="/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/include/dpd/add_guardbands_vcvc.h" bodystart="36" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classgr_1_1dpd_1_1add__guardbands__vcvc_1acff92d80d89292c8122b841cc275f777" prot="public" virt="non-virtual"><scope>gr::dpd::add_guardbands_vcvc</scope><name>make</name></member>
+      <member refid="classgr_1_1dpd_1_1add__guardbands__vcvc_1a427014ae1a89df4e95a40395e7f8dea4" prot="public" virt="non-virtual"><scope>gr::dpd::add_guardbands_vcvc</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

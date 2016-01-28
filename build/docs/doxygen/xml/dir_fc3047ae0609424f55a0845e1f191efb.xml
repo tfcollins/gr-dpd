@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_fc3047ae0609424f55a0845e1f191efb" kind="dir">
+    <compoundname>dpd</compoundname>
+    <innerfile refid="add__guardbands__vcvc_8h">add_guardbands_vcvc.h</innerfile>
+    <innerfile refid="api_8h">api.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/include/dpd/"/>
+  </compounddef>
+</doxygen>

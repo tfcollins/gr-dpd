@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/include</compoundname>
+    <innerdir refid="dir_fc3047ae0609424f55a0845e1f191efb">/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/include/dpd</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/include/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<block>
+  <name>add_guardbands_vcvc</name>
+  <key>dpd_add_guardbands_vcvc</key>
+  <category>dpd</category>
+  <import>import dpd</import>
+  <make>dpd.add_guardbands_vcvc($in_vlen, $out_vlen)</make>
+
+  <param>
+    <name>Input Vec Size</name>
+    <key>in_vlen</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Output Vec Size</name>
+    <key>out_vlen</key>
+    <type>int</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+    <vlen>$in_vlen</vlen>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>complex</type>
+    <vlen>$out_vlen</vlen>
+  </source>
+
+</block>

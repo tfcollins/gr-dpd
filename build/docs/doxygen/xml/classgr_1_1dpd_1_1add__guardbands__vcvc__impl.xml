@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classgr_1_1dpd_1_1add__guardbands__vcvc__impl" kind="class" prot="public">
+    <compoundname>gr::dpd::add_guardbands_vcvc_impl</compoundname>
+    <basecompoundref refid="classgr_1_1dpd_1_1add__guardbands__vcvc" prot="public" virt="non-virtual">gr::dpd::add_guardbands_vcvc</basecompoundref>
+    <includes refid="add__guardbands__vcvc__impl_8h" local="no">add_guardbands_vcvc_impl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1dpd_1_1add__guardbands__vcvc__impl_1ad2dcb33a8cf76e167752863bd19b2516" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::dpd::add_guardbands_vcvc_impl::d_in_vlen</definition>
+        <argsstring></argsstring>
+        <name>d_in_vlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/lib/add_guardbands_vcvc_impl.h" line="32" column="1" bodyfile="/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/lib/add_guardbands_vcvc_impl.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1dpd_1_1add__guardbands__vcvc__impl_1a60a796431e4dd01b1f431fca3a26d573" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::dpd::add_guardbands_vcvc_impl::d_out_vlen</definition>
+        <argsstring></argsstring>
+        <name>d_out_vlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/lib/add_guardbands_vcvc_impl.h" line="33" column="1" bodyfile="/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/lib/add_guardbands_vcvc_impl.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1dpd_1_1add__guardbands__vcvc__impl_1aef729cd6420fd6e00ae749ceb02485c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::dpd::add_guardbands_vcvc_impl::add_guardbands_vcvc_impl</definition>
+        <argsstring>(int in_vlen, int out_vlen)</argsstring>
+        <name>add_guardbands_vcvc_impl</name>
+        <param>
+          <type>int</type>
+          <declname>in_vlen</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>out_vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/lib/add_guardbands_vcvc_impl.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1dpd_1_1add__guardbands__vcvc__impl_1a314bba91934d8bcfaff3ed9c8d26d9a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::dpd::add_guardbands_vcvc_impl::~add_guardbands_vcvc_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~add_guardbands_vcvc_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/lib/add_guardbands_vcvc_impl.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1dpd_1_1add__guardbands__vcvc__impl_1af8f2422cb8b56085d467d420df53101a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::dpd::add_guardbands_vcvc_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/lib/add_guardbands_vcvc_impl.h" line="40" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="13">
+        <label>gr::sync_block</label>
+      </node>
+      <node id="11">
+        <label>gr::dpd::add_guardbands_vcvc_impl</label>
+        <link refid="classgr_1_1dpd_1_1add__guardbands__vcvc__impl"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>gr::dpd::add_guardbands_vcvc</label>
+        <link refid="classgr_1_1dpd_1_1add__guardbands__vcvc"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="16">
+        <label>gr::sync_block</label>
+      </node>
+      <node id="14">
+        <label>gr::dpd::add_guardbands_vcvc_impl</label>
+        <link refid="classgr_1_1dpd_1_1add__guardbands__vcvc__impl"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>gr::dpd::add_guardbands_vcvc</label>
+        <link refid="classgr_1_1dpd_1_1add__guardbands__vcvc"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/lib/add_guardbands_vcvc_impl.h" line="30" column="1" bodyfile="/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/lib/add_guardbands_vcvc_impl.h" bodystart="29" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classgr_1_1dpd_1_1add__guardbands__vcvc__impl_1aef729cd6420fd6e00ae749ceb02485c3" prot="public" virt="non-virtual"><scope>gr::dpd::add_guardbands_vcvc_impl</scope><name>add_guardbands_vcvc_impl</name></member>
+      <member refid="classgr_1_1dpd_1_1add__guardbands__vcvc__impl_1ad2dcb33a8cf76e167752863bd19b2516" prot="private" virt="non-virtual"><scope>gr::dpd::add_guardbands_vcvc_impl</scope><name>d_in_vlen</name></member>
+      <member refid="classgr_1_1dpd_1_1add__guardbands__vcvc__impl_1a60a796431e4dd01b1f431fca3a26d573" prot="private" virt="non-virtual"><scope>gr::dpd::add_guardbands_vcvc_impl</scope><name>d_out_vlen</name></member>
+      <member refid="classgr_1_1dpd_1_1add__guardbands__vcvc_1acff92d80d89292c8122b841cc275f777" prot="public" virt="non-virtual"><scope>gr::dpd::add_guardbands_vcvc_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1dpd_1_1add__guardbands__vcvc_1a427014ae1a89df4e95a40395e7f8dea4" prot="public" virt="non-virtual"><scope>gr::dpd::add_guardbands_vcvc_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1dpd_1_1add__guardbands__vcvc__impl_1af8f2422cb8b56085d467d420df53101a" prot="public" virt="non-virtual"><scope>gr::dpd::add_guardbands_vcvc_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1dpd_1_1add__guardbands__vcvc__impl_1a314bba91934d8bcfaff3ed9c8d26d9a9" prot="public" virt="non-virtual"><scope>gr::dpd::add_guardbands_vcvc_impl</scope><name>~add_guardbands_vcvc_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/Dropbox/PHD/WiFiUS/doa/gnuradio/gr-dpd/build/swig/_dpd_swig_swig_tag.cpp
+
