@@ -27,6 +27,7 @@ link_directories(${Boost_LIBRARY_DIRS})
 
 list(APPEND dpd_sources
     add_guardbands_vcvc_impl.cc
+    read_tag_from_stream_cc_impl.cc
 )
 
 set(dpd_sources "${dpd_sources}" PARENT_SCOPE)

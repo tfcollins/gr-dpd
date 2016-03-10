@@ -22,5 +22,6 @@
 ########################################################################
 install(FILES
     api.h
-    add_guardbands_vcvc.h DESTINATION include/dpd
+    add_guardbands_vcvc.h
+    read_tag_from_stream_cc.h DESTINATION include/dpd
 )

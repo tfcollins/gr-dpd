@@ -18,5 +18,6 @@
 # Boston, MA 02110-1301, USA.
 
 install(FILES
-    dpd_add_guardbands_vcvc.xml DESTINATION share/gnuradio/grc/blocks
+    dpd_add_guardbands_vcvc.xml
+    dpd_read_tag_from_stream_cc.xml DESTINATION share/gnuradio/grc/blocks
 )
