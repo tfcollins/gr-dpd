@@ -22,6 +22,7 @@
 #include "config.h"
 #endif
 
+#include <string.h>
 #include <gnuradio/io_signature.h>
 #include "read_tag_from_stream_cc_impl.h"
 
@@ -73,6 +74,10 @@ namespace gr {
       std::vector<gr::tag_t> tags;
       std::vector<gr::tag_t> tags2;
 
+      pmt::pmt_t srcid;
+      pmt::pmt_t value;
+      pmt::pmt_t key;
+
       // Tags contain up to 3 things
       // 1. key: which can be used to identify a certain tag
       // 2. value: actual data in the tag of type pmt
@@ -96,15 +101,12 @@ namespace gr {
           for (int k = 0; k<tags.size(); k++)
           {
             // Pull out tag info
-            std::cout<<"SRCID: "<<pmt::symbol_to_string(tags[k].srcid)<<std::endl;
             std::cout<<"Key: "<<pmt::symbol_to_string(tags[k].key)<<std::endl;
-            std::cout<<"Value: "<<pmt::symbol_to_string(tags[k].value)<<std::endl;
+            std::cout<<"Value: "<<pmt::to_long(tags[k].value)<<std::endl;
+            std::cout<<"SRCID: "<< (pmt::is_symbol(tags[k].srcid) ? pmt::symbol_to_string(tags[k].srcid) :"n/a") <<std::endl; // SRCID is not guaranteed to exist
           }
-
         }
-
       }
-
 
       // Tell runtime system how many output items we produced.
       return noutput_items;
