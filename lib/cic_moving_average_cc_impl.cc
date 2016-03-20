@@ -45,7 +45,7 @@ namespace gr {
       d_window_len(window_len)
     {
       // Set tap length
-      set_history(window_len);
+      set_history(window_len+1);
       // Set last output value
       d_last_output = gr_complex(0,0);
     }
@@ -65,14 +65,13 @@ namespace gr {
       const gr_complex *in = (const gr_complex *) input_items[0];
       gr_complex *out = (gr_complex *) output_items[0];
 
-      for(int i=0; i<noutput_items; i++)
-      {
-        //output[n] = output[n-1] + input[n] - input[n-taps]
-        if (i==0)
-          out[i] = d_last_output + in[i+d_last_output] - in[i];
-        else
-          out[i] = out[i-1] + in[i+d_last_output] - in[i];
-      }
+      // First Tap
+      out[0] = d_last_output + in[d_window_len] - in[0];
+
+      // Remaining Taps
+      for(int i=1; i<noutput_items; i++)
+          out[i] = out[i-1] + in[i+d_window_len] - in[i];
+
       // Save stuff for next block call
       d_last_output = out[noutput_items-1];
 

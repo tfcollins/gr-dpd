@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Thu Mar 10 09:07:20 2016
+# Generated: Sun Mar 20 16:23:25 2016
 ##################################################
 
 if __name__ == '__main__':
@@ -17,10 +17,10 @@ if __name__ == '__main__':
             print "Warning: failed to XInitThreads()"
 
 from PyQt4 import Qt
-from gnuradio import analog
 from gnuradio import blocks
 from gnuradio import eng_notation
 from gnuradio import gr
+from gnuradio.ctrlport.monitor import *
 from gnuradio.eng_option import eng_option
 from gnuradio.filter import firdes
 from optparse import OptionParser
@@ -56,24 +56,32 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         # Variables
         ##################################################
-        self.samp_rate = samp_rate = 100
+        self.samp_rate = samp_rate = 32000
 
         ##################################################
         # Blocks
         ##################################################
-        self.dpd_read_tag_from_stream_cc_0 = dpd.read_tag_from_stream_cc()
-        self.blocks_throttle_0 = blocks.throttle(gr.sizeof_gr_complex*1, samp_rate,True)
-        self.blocks_stream_to_tagged_stream_0 = blocks.stream_to_tagged_stream(gr.sizeof_gr_complex, 1, 10, "packet_len")
+        self.dpd_cic_moving_average_cc_0 = dpd.cic_moving_average_cc(4)
+        self.blocks_vector_source_x_0 = blocks.vector_source_c((1,2,3,4,5,6,7,8,9,10), True, 1, [])
+        self.blocks_null_sink_0_0 = blocks.null_sink(gr.sizeof_gr_complex*1)
         self.blocks_null_sink_0 = blocks.null_sink(gr.sizeof_gr_complex*1)
-        self.analog_sig_source_x_0 = analog.sig_source_c(samp_rate, analog.GR_COS_WAVE, 1000, 1, 0)
+        self.blocks_moving_average_xx_0 = blocks.moving_average_cc(4, 1, 4000)
+        self.blocks_head_0 = blocks.head(gr.sizeof_gr_complex*1, 2**30)
+        self.blocks_ctrlport_probe2_c_0_0 = blocks.ctrlport_probe2_c("samples", "MA", 1024, gr.DISPTIME)
+        self.blocks_ctrlport_probe2_c_0 = blocks.ctrlport_probe2_c("samples", "CIC", 1024, gr.DISPTIME)
+        self.blocks_ctrlport_monitor_performance_0 = not True or monitor("gr-perf-monitorx")
+        self.blocks_ctrlport_monitor_0 = not True or monitor()
 
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.analog_sig_source_x_0, 0), (self.blocks_throttle_0, 0))    
-        self.connect((self.blocks_stream_to_tagged_stream_0, 0), (self.dpd_read_tag_from_stream_cc_0, 0))    
-        self.connect((self.blocks_throttle_0, 0), (self.blocks_stream_to_tagged_stream_0, 0))    
-        self.connect((self.dpd_read_tag_from_stream_cc_0, 0), (self.blocks_null_sink_0, 0))    
+        self.connect((self.blocks_head_0, 0), (self.blocks_null_sink_0_0, 0))    
+        self.connect((self.blocks_moving_average_xx_0, 0), (self.blocks_ctrlport_probe2_c_0_0, 0))    
+        self.connect((self.blocks_moving_average_xx_0, 0), (self.blocks_head_0, 0))    
+        self.connect((self.blocks_vector_source_x_0, 0), (self.blocks_moving_average_xx_0, 0))    
+        self.connect((self.blocks_vector_source_x_0, 0), (self.dpd_cic_moving_average_cc_0, 0))    
+        self.connect((self.dpd_cic_moving_average_cc_0, 0), (self.blocks_ctrlport_probe2_c_0, 0))    
+        self.connect((self.dpd_cic_moving_average_cc_0, 0), (self.blocks_null_sink_0, 0))    
 
     def closeEvent(self, event):
         self.settings = Qt.QSettings("GNU Radio", "top_block")
@@ -86,8 +94,6 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
-        self.analog_sig_source_x_0.set_sampling_freq(self.samp_rate)
-        self.blocks_throttle_0.set_sample_rate(self.samp_rate)
 
 
 def main(top_block_cls=top_block, options=None):
@@ -106,6 +112,16 @@ def main(top_block_cls=top_block, options=None):
         tb.stop()
         tb.wait()
     qapp.connect(qapp, Qt.SIGNAL("aboutToQuit()"), quitting)
+    if True:
+        if True:
+            (tb.blocks_ctrlport_monitor_0).start()
+    else:
+        sys.stderr.write("Monitor '{0}' does not have an enable ('en') parameter.".format("tb.blocks_ctrlport_monitor_0"))
+    if True:
+        if True:
+            (tb.blocks_ctrlport_monitor_performance_0).start()
+    else:
+        sys.stderr.write("Monitor '{0}' does not have an enable ('en') parameter.".format("tb.blocks_ctrlport_monitor_performance_0"))
     qapp.exec_()
 
 
