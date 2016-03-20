@@ -19,5 +19,6 @@
 
 install(FILES
     dpd_add_guardbands_vcvc.xml
-    dpd_read_tag_from_stream_cc.xml DESTINATION share/gnuradio/grc/blocks
+    dpd_read_tag_from_stream_cc.xml
+    dpd_cic_moving_average_cc.xml DESTINATION share/gnuradio/grc/blocks
 )

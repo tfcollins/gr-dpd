@@ -10,6 +10,7 @@
 %{
 #include "dpd/add_guardbands_vcvc.h"
 #include "dpd/read_tag_from_stream_cc.h"
+#include "dpd/cic_moving_average_cc.h"
 %}
 
 
@@ -17,3 +18,5 @@
 GR_SWIG_BLOCK_MAGIC2(dpd, add_guardbands_vcvc);
 %include "dpd/read_tag_from_stream_cc.h"
 GR_SWIG_BLOCK_MAGIC2(dpd, read_tag_from_stream_cc);
+%include "dpd/cic_moving_average_cc.h"
+GR_SWIG_BLOCK_MAGIC2(dpd, cic_moving_average_cc);

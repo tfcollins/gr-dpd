@@ -23,5 +23,6 @@
 install(FILES
     api.h
     add_guardbands_vcvc.h
-    read_tag_from_stream_cc.h DESTINATION include/dpd
+    read_tag_from_stream_cc.h
+    cic_moving_average_cc.h DESTINATION include/dpd
 )
