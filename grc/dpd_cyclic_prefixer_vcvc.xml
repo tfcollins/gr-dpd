@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<block>
+  <name>cyclic_prefixer_vcvc</name>
+  <key>dpd_cyclic_prefixer_vcvc</key>
+  <category>dpd</category>
+  <import>import dpd</import>
+  <make>dpd.cyclic_prefixer_vcvc($ofdm_sym_len, $cp_len)</make>
+  <param>
+    <name>OFDM Symbol Length</name>
+    <key>ofdm_sym_len</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>CP Length</name>
+    <key>cp_len</key>
+    <type>int</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+    <vlen>$ofdm_sym_len</vlen>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>complex</type>
+    <vlen>$ofdm_sym_len+$cp_len</vlen>
+  </source>
+</block>
