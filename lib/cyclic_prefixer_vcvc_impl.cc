@@ -78,11 +78,9 @@ namespace gr {
 	  // add ofdm symbol
 	  memcpy( out+outIndex+d_cp_len, in+inIndex, ofdm_data_size);
 
-      for (int i=0; i<(d_cp_len+d_ofdm_sym_len); i++ )
-        std::cout<<"i: "<<i<<" | out: "<<out[i+outIndex]<<std::endl;
-
-        inIndex =+ d_ofdm_sym_len;
-        outIndex =+ d_ofdm_sym_len+d_cp_len;
+	  // increment indexing
+          inIndex =+ d_ofdm_sym_len;
+          outIndex =+ d_ofdm_sym_len+d_cp_len;
 	}
 
       // Tell runtime system how many output items we produced.
