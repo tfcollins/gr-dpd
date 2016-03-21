@@ -1,17 +1,17 @@
 /* -*- c++ -*- */
-/* 
+/*
  * Copyright 2016 <+YOU OR YOUR COMPANY+>.
- * 
+ *
  * This is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 3, or (at your option)
  * any later version.
- * 
+ *
  * This software is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this software; see the file COPYING.  If not, write to
  * the Free Software Foundation, Inc., 51 Franklin Street,
@@ -62,7 +62,8 @@ namespace gr {
       gr_complex *out = (gr_complex *) output_items[0];
 
 	// index helpers
-	int items = 0;
+	int inIndex = 0;
+    int outIndex = 0;
 	int cp_start_index = d_ofdm_sym_len - d_cp_len;
 
 	// datatype sizes
@@ -72,12 +73,16 @@ namespace gr {
 	for (int vec=0; vec<noutput_items; vec++)
 	{
 	  // add prefix
-	  memcpy( out+d_ofdm_sym_len, in+d_ofdm_sym_len+cp_start_index, cp_size);
+	  memcpy( out+outIndex, in+inIndex+cp_start_index, cp_size);
 
 	  // add ofdm symbol
-	  memcpy( out+d_ofdm_sym_len+cp_start_index, in+d_ofdm_sym_len, ofdm_data_size);
+	  memcpy( out+outIndex+d_cp_len, in+inIndex, ofdm_data_size);
 
-	  items =+ d_ofdm_sym_len;
+      for (int i=0; i<(d_cp_len+d_ofdm_sym_len); i++ )
+        std::cout<<"i: "<<i<<" | out: "<<out[i+outIndex]<<std::endl;
+
+        inIndex =+ d_ofdm_sym_len;
+        outIndex =+ d_ofdm_sym_len+d_cp_len;
 	}
 
       // Tell runtime system how many output items we produced.
@@ -86,4 +91,3 @@ namespace gr {
 
   } /* namespace dpd */
 } /* namespace gr */
-
